@@ -1,0 +1,37 @@
+open	                       http://www.facebook.com/	 
+waitForPageToLoad 
+type	email	                 muratgundes@hotmail.com
+type	password	             123456
+mouseOver                    login
+clickAndWait	               //button[@type=’submit’]	 
+
+
+openWindow                   http://www.n11.com
+waitForPageToLoad     
+verifyTitle                  n11.com - Alışverişin Uğurlu Adresi
+open                         https://www.n11.com/giris-yap
+type	email	                 muratgundes@hotmail.com
+type	password	             123456
+mouseOver                    login
+clickAndWait	               //button[@type=’submit’]
+click                        search bar
+type search                  samsung
+clickAndWait                 //button[@type=’submit’]
+verifyTitle                  samsung - n11.com
+assertTextPresent            samsung
+clickAndWait                 //div[@id=’pagination’]/a[2]/div/div/div/span
+waitForPageToLoad   
+assertTitle                  Samsung - n11.com - 2/8659
+verifyElementPresent         //div[@id=’p-38711636’]
+click                        //div[@id=’38711636’]/"textImg followBtn ok"
+mouseOver	                   link=Hesabım
+assertTextPresent	           Hesabım	 
+clickAndWait	               //div[@id=’openmenudiv’]/a[2]/div/div/div/span
+waitForPageToLoad   
+verifyTable                  SAMSUNG I9060 SIYAH GRAND NEO CEP TELEFONU
+click                        //button[@type=’remove’]
+assertTextPresent            SAMSUNG I9060 SIYAH GRAND NEO CEP TELEFONU
+
+
+
+
